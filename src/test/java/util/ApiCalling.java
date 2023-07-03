@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 public class ApiCalling {
 	
-	private String base_url = "https://reqres.in";
+	private String base_url = Constants.BaseURL;
 	public Response response;
 	
 	public Response sendRequest(RequestSpecification request, RequestTypes val ,String url)
@@ -16,7 +16,7 @@ public class ApiCalling {
 		
 		case GET:
 			if (request==null) {
-				response = RestAssured.when().get(url);
+				response = RestAssured.get(url);
 			} else {
 				response = request.get(url);
 			}

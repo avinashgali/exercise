@@ -10,10 +10,10 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features",
 		glue = "stepdefinations",
 		plugin = {
-//				"pretty",
+				"pretty",
 				"html:target/report/TestReport.html"
 		},
-//		dryRun = true,
+		dryRun = true,
 		monochrome = true
 		)
 public class TestRunner {
